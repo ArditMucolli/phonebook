@@ -1,15 +1,13 @@
 const intialState = [
   {
     id: 0,
-    name: "Ardit Mucolli",
-    phoneNumber: 1234,
-    email: "rs@gmail.com",
-  },
-  {
-    id: 1,
-    name: "test name",
-    phoneNumber: 4321,
+    name: "Ardit",
+    lastName: "Mucolli",
+    address: "11000",
+    city: "Prishtina",
+    country: "Kosovo",
     email: "test@gmail.com",
+    phoneNumber: 12345678,
   },
 ];
 
