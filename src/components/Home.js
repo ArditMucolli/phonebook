@@ -21,51 +21,53 @@ const Home = () => {
         </div>
         <div className="col-md-12 mx-auto">
           <h1 className="mb-5">Contacts</h1>
-          <table className="table table-bordered table-striped">
-            <thead className=" text-center">
-              <tr>
-                <th scope="col">Name</th>
-                <th scope="col">LastName</th>
-                <th scope="col">Address</th>
-                <th scope="col">city</th>
-                <th scope="col">country</th>
-                <th scope="col">Email</th>
-                <th scope="col">Number</th>
-                <th scope="col">Edit</th>
-                <th scope="col">Delete</th>
-              </tr>
-            </thead>
-            <tbody className="text-center">
-              {contacts.map((contact, id) => (
-                <tr key={id}>
-                  <td>{contact.name}</td>
-                  <td>{contact.lastName}</td>
-                  <td>{contact.address}</td>
-                  <td>{contact.city}</td>
-                  <td>{contact.country}</td>
-                  <td>{contact.email}</td>
-                  <td>{contact.phoneNumber}</td>
-                  <td>
-                    <Link
-                      to={`/edit/${contact.id}`}
-                      className="btn btn-small btn-success"
-                    >
-                      Edit
-                    </Link>
-                  </td>
-                  <td>
-                    <button
-                      type="button"
-                      onClick={() => deleteContact(contact.id)}
-                      className="btn btn-small btn-danger"
-                    >
-                      Delete
-                    </button>
-                  </td>
+          <div className="table-responsive-sm">
+            <table className="table table-bordered table-striped">
+              <thead className=" text-center">
+                <tr>
+                  <th scope="col">Name</th>
+                  <th scope="col">LastName</th>
+                  <th scope="col">Address</th>
+                  <th scope="col">city</th>
+                  <th scope="col">country</th>
+                  <th scope="col">Email</th>
+                  <th scope="col">Number</th>
+                  <th scope="col">Edit</th>
+                  <th scope="col">Delete</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody className="text-center">
+                {contacts.map((contact, id) => (
+                  <tr key={id}>
+                    <td>{contact.name}</td>
+                    <td>{contact.lastName}</td>
+                    <td>{contact.address}</td>
+                    <td>{contact.city}</td>
+                    <td>{contact.country}</td>
+                    <td>{contact.email}</td>
+                    <td>{contact.phoneNumber}</td>
+                    <td>
+                      <Link
+                        to={`/edit/${contact.id}`}
+                        className="btn btn-small btn-success"
+                      >
+                        Edit
+                      </Link>
+                    </td>
+                    <td>
+                      <button
+                        type="button"
+                        onClick={() => deleteContact(contact.id)}
+                        className="btn btn-small btn-danger"
+                      >
+                        Delete
+                      </button>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </div>
