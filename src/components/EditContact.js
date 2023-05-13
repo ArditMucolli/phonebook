@@ -85,7 +85,7 @@ const EditContact = () => {
       {currentContact ? (
         <>
           <div className="row">
-            <h1 className="text-center my-4">Edit Contact {id}</h1>
+            <h1 className="text-center my-4">Edit Contact {name}</h1>
             <div className="col-md-6 mx-auto p-5">
               <form onSubmit={handleSubmit}>
                 <div className="form-group ">
